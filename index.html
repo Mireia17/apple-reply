@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+        <style>
+            body{background: black; font-family: 'Helvetica Neue'; color: #fff; padding: 30px;}
+            h1{font-size: 52px; letter-spacing: 1px; text-align: center;}
+            p{font-size: 24px; text-align: center;}
+        </style>
+            <script type="text/javascript">
+                var widgetSettings = {
+                        checkEnabled: false,
+                        style: "fixed",
+                        fixedCloseMode: "floating",
+                        fixedClosedModeIconUrl: "https://www.giitic.com/img/software/ios.png?pfdrid_c=true", //image when the bot is closed
+                        avatarUrl: "https://cdn.pixabay.com/photo/2018/05/08/21/28/apple-3384010_960_720.png", // image when the bot is open
+                        appendTo: "#widget-box",
+                        openOnInit: false,
+                        showOnInit: true,
+                        sessionDurationSeconds: 24 * 60 * 60,
+                        sessionId: "SESSION_ID",
+                        height: "430px",
+                        width: "330px",
+                        hideInputText: "never",
+                        minDurationIsTyping: 800,
+                        iframeSandbox: false,
+                        debugEvents: false,
+                        contactFields: [],
+                        contactName: "Widget user",
+                        dateTime: {
+                            locale: "en",
+                            messageFormat: "[Sent] h:mm a"
+                        },
+                    
+                        
+                        mainMenu: {
+                            buttons: [
+                                {
+                                    type: "web_url",
+                                    title: "Open Apple.com",
+                                    url: "https://appleid.apple.com/#!&page=signin",
+                                    target: "_blank"
+                                },
+                                {
+                                    type: "postback",
+                                    title: "Restart the bot",
+                                    payload: "#start"
+                                },
+                                {
+                                    type: "web_url",
+                                    title: "Talk with an assitant",
+                                    url: "https://getsupport.apple.com/?caller=psp&PRKEYS=PL133", //here we will need to connect the chatbot with an Apple assitant
+                                    target: "_blank"
+                                }
+                            ]
+                        },
+                        customText: {
+                            headerText: "Apple Online Assitance",
+                            closedHeaderText: "Ask me",
+                            botName: "Apple",
+                            userName: "You",
+                            inputPlaceholder: "Type your message",
+                            headerTextMenuTitle: "Menu"
+                        },
+                       
+                        customStyles: {
+                            headerLogo: {
+                            imageUrl: "",
+                            title: "Apple Online Support",
+                            url: "https://appleid.apple.com/#!&page=signin"
+                        },
+                            headerBgColor: "#3B3B3B",
+                            botMsgBgColor: "white",
+                            botMsgFontColor: "black",
+                            botMsgBorderColor: "#e9ecf1"
+                        },
+
+                    channelUuid: "7953f11a-f7e0-468c-a7bb-e84365339b13",
+                    style: "fixed", // "fixed", "embed" or "fullpage". Open the sample page for all the configuration paramaters
+
+                        customText: {
+                         closedHeaderText: "Ask me"
+                        },
+
+                    welcomeMessage : {
+                        imageUrl: "https://live.staticflickr.com/2263/1988339224_e4a07df395_n.jpg",
+                        text : "Hello! I am here to help you with any question you may have. What would you want to do next?",
+                        buttons:[
+                            {
+                                type :"web_url",
+                                title : "Open Apple.com",
+                                url: "https://www.apple.com/"
+                            },
+                            {
+                                type :"postback",
+                                title : "Ask a question",
+                                payload: "question"
+                            },
+                        ]
+                    },
+
+                };
+
+                window.replySDK = (function(d, s, id) {
+                    var o = window.replySDK || {};var js,
+                    fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;js.crossOrigin='anonymous';
+                    js.src = "https://d1fidecqhnmd5.cloudfront.net/prod/v1/dist/js/reply-sdk.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                    o.isLoaded=false;o._e = [];o.load = function(f) { o._e.push(f);};
+                    js.onload = function () { replySDK.init( widgetSettings ); };return o;
+                }(document, 'script', 'reply-sdk-js'));
+            </script>
+        
+        <body>
+            <h1>Apple Bot</h1>
+            <p>Make your customer service faster and smarter</p>
+            <img src="https://live.staticflickr.com/2263/1988339224_e4a07df395_n.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;">
+        </body>
+    </head>
+ </html>
